@@ -1,6 +1,6 @@
 {
   "name": "gulp-save",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "license": "MIT",
   "repository": "danielhusar/gulp-save",
@@ -23,8 +23,7 @@
     "cache",
     "store",
     "restore",
-    "filter",
-    "gulpplugin"
+    "filter"
   ],
   "dependencies": {
     "gulp-util": "^3.0.0",

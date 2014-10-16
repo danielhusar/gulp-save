@@ -5,7 +5,7 @@ var cache = {};
 
 module.exports = function (store) {
 	if (!store || typeof store !== 'string') {
-		throw new gutil.PluginError('gulp-save', '`store` parameters must be string');
+		throw new gutil.PluginError('gulp-save', '`store` parameter must be string');
 	}
 
 	var firstFile = false;
@@ -30,14 +30,13 @@ module.exports = function (store) {
 
 		cache[store].push(file);
 		this.push(file);
-
 		cb();
 	});
 };
 
 module.exports.restore = function (store) {
 	if (!store || typeof store !== 'string') {
-		throw new gutil.PluginError('gulp-save', '`store` parameters must be string');
+		throw new gutil.PluginError('gulp-save', '`store` parameter must be string');
 	}
 
 	return through.obj(function (file, enc, cb) {
@@ -45,7 +44,6 @@ module.exports.restore = function (store) {
 	}, function () {
 
 		cache[store].forEach(function (file) {
-			console.log(file);
 			this.emit('data', file);
 		}.bind(this));
 

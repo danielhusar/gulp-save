@@ -1,7 +1,7 @@
 'use strict';
 var assert = require('assert');
-var through = require('through2');
 var gutil = require('gulp-util');
+var through = require('through2');
 var save = require('./');
 
 function transform () {
@@ -25,7 +25,9 @@ it('should cache stream and restore it', function (cb) {
 	var testEmpty = empty();
 	var restoreCache = save.restore('test');
 
-	startCache.pipe(testTransform).pipe(restoreCache).pipe(testEmpty);
+	startCache.pipe(testTransform)
+						.pipe(restoreCache)
+						.pipe(testEmpty);
 
 	testTransform.on('data', function (file) {
 		assert.equal(file.contents.toString(), 'two unicorns');
