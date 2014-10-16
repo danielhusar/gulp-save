@@ -45,8 +45,9 @@ module.exports.restore = function (store) {
 	}, function () {
 
 		cache[store].forEach(function (file) {
+			console.log(file);
 			this.emit('data', file);
-		});
+		}.bind(this));
 
 		this.emit('end');
 	});
