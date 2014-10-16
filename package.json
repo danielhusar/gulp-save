@@ -1,0 +1,36 @@
+{
+  "name": "gulp-save",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "danielhusar/gulp-save",
+  "author": {
+    "name": "Daniel Husar",
+    "email": "dano.husar@gmail.com",
+    "url": "https://github.com/danielhusar"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "cache",
+    "store",
+    "restore",
+    "filter",
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.0",
+    "through2": "^0.6.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
