@@ -1,6 +1,6 @@
 # [gulp](http://gulpjs.com)-save [![Build Status](https://travis-ci.org/danielhusar/gulp-save.svg?branch=master)](https://travis-ci.org/danielhusar/gulp-save)
 
-> Store and restore stream.
+> Store and restore files in stream.
 
 
 ## Install
@@ -19,10 +19,10 @@ var uglify = require('gulp-uglify');
 
 gulp.task('default', function () {
 	return gulp.src('src/*.js')
-		.pipe(save('before-uglify'))
+		.pipe(save('before-uglify')) //cache all files here
 		.pipe(uglify())
 		.pipe(gulp.dest('dist'))
-		.pipe(save.restore('before-uglify'))
+		.pipe(save.restore('before-uglify')) //restore all files to the state when we cached them
 		.pipe(gulp.dest('dist'));
 
 });
