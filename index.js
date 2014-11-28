@@ -28,7 +28,15 @@ module.exports = function (store) {
 			firstFile = true;
 		}
 
-		cache[store].push(file);
+		cache[store].push(new gutil.File({
+			base: file.base,
+			path: file.path,
+			history: file.history,
+			stat: file.stat,
+			sourceMap: file.sourceMap,
+			contents: file.contents
+		}));
+
 		this.push(file);
 		cb();
 	});
@@ -48,9 +56,9 @@ module.exports.restore = function (store) {
 		}
 
 		cache[store].forEach(function (file) {
-			this.push(file);	
+			this.push(file);
 		}.bind(this));
-		
+
 		cb();
 	});
 };
