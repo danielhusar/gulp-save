@@ -41,13 +41,16 @@ module.exports.restore = function (store) {
 
 	return through.obj(function (file, enc, cb) {
 		cb();
-	}, function () {
+	}, function (cb) {
 
 		if (!cache[store]) {
 			gutil.log('gulp-save', gutil.colors.red('cache for `'+ store +'` not found'));
 		}
 
-		cache[store].forEach(this.emit.bind(this, 'data'));
-		this.emit('end');
+		cache[store].forEach(function (file) {
+			this.push(file);	
+		}.bind(this));
+		
+		cb();
 	});
 };
