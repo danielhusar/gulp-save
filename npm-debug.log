@@ -1,0 +1,405 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/danielhusar/Dev/nodejs/gulp-save',
+5 verbose install   [ 'gulp-util', 'through2', 'mocha' ] ]
+6 info preinstall gulp-save@1.0.3
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'gulp-util@^3.0.0', null ]
+9 verbose cache add name=undefined spec="gulp-util@^3.0.0" args=["gulp-util@^3.0.0",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'gulp-util@^3.0.0',
+10 verbose parsed url   path: 'gulp-util@^3.0.0',
+10 verbose parsed url   href: 'gulp-util@^3.0.0' }
+11 verbose cache add [ 'through2@^0.6.1', null ]
+12 verbose cache add name=undefined spec="through2@^0.6.1" args=["through2@^0.6.1",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'through2@^0.6.1',
+13 verbose parsed url   path: 'through2@^0.6.1',
+13 verbose parsed url   href: 'through2@^0.6.1' }
+14 verbose cache add [ 'mocha@*', null ]
+15 verbose cache add name=undefined spec="mocha@*" args=["mocha@*",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'mocha@*',
+16 verbose parsed url   path: 'mocha@*',
+16 verbose parsed url   href: 'mocha@*' }
+17 verbose cache add name="gulp-util" spec="^3.0.0" args=["gulp-util","^3.0.0"]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: '^3.0.0',
+18 verbose parsed url   path: '^3.0.0',
+18 verbose parsed url   href: '^3.0.0' }
+19 verbose addNamed [ 'gulp-util', '^3.0.0' ]
+20 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+21 verbose cache add name="through2" spec="^0.6.1" args=["through2","^0.6.1"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '^0.6.1',
+22 verbose parsed url   path: '^0.6.1',
+22 verbose parsed url   href: '^0.6.1' }
+23 verbose addNamed [ 'through2', '^0.6.1' ]
+24 verbose addNamed [ null, '>=0.6.1-0 <0.7.0-0' ]
+25 verbose cache add name="mocha" spec="*" args=["mocha","*"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '*',
+26 verbose parsed url   path: '*',
+26 verbose parsed url   href: '*' }
+27 verbose addNamed [ 'mocha', '*' ]
+28 verbose addNamed [ null, '*' ]
+29 silly lockFile dfa9a863-gulp-util-3-0-0 gulp-util@^3.0.0
+30 verbose lock gulp-util@^3.0.0 /Users/danielhusar/.npm/dfa9a863-gulp-util-3-0-0.lock
+31 silly lockFile ef970176-through2-0-6-1 through2@^0.6.1
+32 verbose lock through2@^0.6.1 /Users/danielhusar/.npm/ef970176-through2-0-6-1.lock
+33 silly lockFile 4d0fa87f-mocha mocha@*
+34 verbose lock mocha@* /Users/danielhusar/.npm/4d0fa87f-mocha.lock
+35 silly addNameRange { name: 'gulp-util',
+35 silly addNameRange   range: '>=3.0.0-0 <4.0.0-0',
+35 silly addNameRange   hasData: false }
+36 silly addNameRange { name: 'through2', range: '>=0.6.1-0 <0.7.0-0', hasData: false }
+37 silly addNameRange { name: 'mocha', range: '*', hasData: false }
+38 verbose request where is /gulp-util
+39 verbose request registry https://registry.npmjs.org/
+40 verbose request id 72acedc5cf59f7cc
+41 verbose url raw /gulp-util
+42 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-util' ]
+43 verbose url resolved https://registry.npmjs.org/gulp-util
+44 verbose request where is https://registry.npmjs.org/gulp-util
+45 info trying registry request attempt 1 at 19:21:07
+46 verbose etag "A3HBUCESC2GID0098Z212FH3Q"
+47 http GET https://registry.npmjs.org/gulp-util
+48 verbose request where is /through2
+49 verbose request registry https://registry.npmjs.org/
+50 verbose url raw /through2
+51 verbose url resolving [ 'https://registry.npmjs.org/', './through2' ]
+52 verbose url resolved https://registry.npmjs.org/through2
+53 verbose request where is https://registry.npmjs.org/through2
+54 info trying registry request attempt 1 at 19:21:07
+55 verbose etag "23I8WVYJBB7WYZMVNO8P4XPLT"
+56 http GET https://registry.npmjs.org/through2
+57 verbose request where is /mocha
+58 verbose request registry https://registry.npmjs.org/
+59 verbose url raw /mocha
+60 verbose url resolving [ 'https://registry.npmjs.org/', './mocha' ]
+61 verbose url resolved https://registry.npmjs.org/mocha
+62 verbose request where is https://registry.npmjs.org/mocha
+63 info trying registry request attempt 1 at 19:21:07
+64 verbose etag "1BHEAOO8DCWS4OCE6FT8A2NBG"
+65 http GET https://registry.npmjs.org/mocha
+66 http 200 https://registry.npmjs.org/through2
+67 silly registry.get cb [ 200,
+67 silly registry.get   { date: 'Sun, 30 Nov 2014 19:21:07 GMT',
+67 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+67 silly registry.get     etag: '"98AGX7AOO209YXTRTMTR9AWQI"',
+67 silly registry.get     'content-type': 'application/json',
+67 silly registry.get     'cache-control': 'max-age=60',
+67 silly registry.get     'content-length': '33960',
+67 silly registry.get     'accept-ranges': 'bytes',
+67 silly registry.get     via: '1.1 varnish',
+67 silly registry.get     age: '53',
+67 silly registry.get     'x-served-by': 'cache-ams4130-AMS',
+67 silly registry.get     'x-cache': 'HIT',
+67 silly registry.get     'x-cache-hits': '2',
+67 silly registry.get     'x-timer': 'S1417375267.869476,VS0,VE0',
+67 silly registry.get     vary: 'Accept',
+67 silly registry.get     'keep-alive': 'timeout=10, max=50',
+67 silly registry.get     connection: 'Keep-Alive' } ]
+68 silly addNameRange number 2 { name: 'through2', range: '>=0.6.1-0 <0.7.0-0', hasData: true }
+69 silly addNameRange versions [ 'through2',
+69 silly addNameRange   [ '0.0.0',
+69 silly addNameRange     '0.0.1',
+69 silly addNameRange     '0.0.2',
+69 silly addNameRange     '0.0.3',
+69 silly addNameRange     '0.0.4',
+69 silly addNameRange     '0.0.5',
+69 silly addNameRange     '0.1.0',
+69 silly addNameRange     '0.2.0',
+69 silly addNameRange     '0.2.1',
+69 silly addNameRange     '0.2.2',
+69 silly addNameRange     '0.2.3',
+69 silly addNameRange     '0.3.0',
+69 silly addNameRange     '0.4.0',
+69 silly addNameRange     '0.4.1',
+69 silly addNameRange     '1.0.0',
+69 silly addNameRange     '0.4.2',
+69 silly addNameRange     '0.5.0',
+69 silly addNameRange     '0.5.1',
+69 silly addNameRange     '0.6.0',
+69 silly addNameRange     '1.1.0',
+69 silly addNameRange     '0.6.1',
+69 silly addNameRange     '1.1.1',
+69 silly addNameRange     '0.6.2',
+69 silly addNameRange     '0.6.3' ] ]
+70 verbose addNamed [ 'through2', '0.6.3' ]
+71 verbose addNamed [ '0.6.3', '0.6.3' ]
+72 silly lockFile 2a56946f-through2-0-6-3 through2@0.6.3
+73 verbose lock through2@0.6.3 /Users/danielhusar/.npm/2a56946f-through2-0-6-3.lock
+74 silly lockFile 443e9f42--org-through2-through2-0-6-3-tgz https://registry.npmjs.org/through2/-/through2-0.6.3.tgz
+75 verbose lock https://registry.npmjs.org/through2/-/through2-0.6.3.tgz /Users/danielhusar/.npm/443e9f42--org-through2-through2-0-6-3-tgz.lock
+76 verbose addRemoteTarball [ 'https://registry.npmjs.org/through2/-/through2-0.6.3.tgz',
+76 verbose addRemoteTarball   '795292fde9f254c2a368b38f9cc5d1bd4663afb6' ]
+77 info retry fetch attempt 1 at 19:21:07
+78 verbose fetch to= /var/folders/27/06lc7__10613vl3nmjk7hp9r0000gn/T/npm-21004-dRol_irF/registry.npmjs.org/through2/-/through2-0.6.3.tgz
+79 http GET https://registry.npmjs.org/through2/-/through2-0.6.3.tgz
+80 http 200 https://registry.npmjs.org/gulp-util
+81 silly registry.get cb [ 200,
+81 silly registry.get   { date: 'Sun, 30 Nov 2014 19:21:07 GMT',
+81 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+81 silly registry.get     etag: '"A72WMRN78BOGBZDM3EZXA0X5F"',
+81 silly registry.get     'content-type': 'application/json',
+81 silly registry.get     'cache-control': 'max-age=60',
+81 silly registry.get     'content-length': '49643',
+81 silly registry.get     'accept-ranges': 'bytes',
+81 silly registry.get     via: '1.1 varnish',
+81 silly registry.get     age: '33',
+81 silly registry.get     'x-served-by': 'cache-ams4129-AMS',
+81 silly registry.get     'x-cache': 'HIT',
+81 silly registry.get     'x-cache-hits': '1',
+81 silly registry.get     'x-timer': 'S1417375267.870344,VS0,VE0',
+81 silly registry.get     vary: 'Accept',
+81 silly registry.get     'keep-alive': 'timeout=10, max=50',
+81 silly registry.get     connection: 'Keep-Alive' } ]
+82 silly addNameRange number 2 { name: 'gulp-util', range: '>=3.0.0-0 <4.0.0-0', hasData: true }
+83 silly addNameRange versions [ 'gulp-util',
+83 silly addNameRange   [ '0.0.1',
+83 silly addNameRange     '1.0.0',
+83 silly addNameRange     '1.1.0',
+83 silly addNameRange     '1.1.1',
+83 silly addNameRange     '1.2.0',
+83 silly addNameRange     '1.3.0',
+83 silly addNameRange     '2.0.0',
+83 silly addNameRange     '2.1.1',
+83 silly addNameRange     '2.1.2',
+83 silly addNameRange     '2.1.3',
+83 silly addNameRange     '2.1.4',
+83 silly addNameRange     '2.2.0',
+83 silly addNameRange     '2.2.1',
+83 silly addNameRange     '2.2.2',
+83 silly addNameRange     '2.2.3',
+83 silly addNameRange     '2.2.5',
+83 silly addNameRange     '2.2.6',
+83 silly addNameRange     '2.2.7',
+83 silly addNameRange     '2.2.8',
+83 silly addNameRange     '2.2.9',
+83 silly addNameRange     '2.2.10',
+83 silly addNameRange     '2.2.11',
+83 silly addNameRange     '2.2.12',
+83 silly addNameRange     '2.2.13',
+83 silly addNameRange     '2.2.14',
+83 silly addNameRange     '2.2.15',
+83 silly addNameRange     '2.2.16',
+83 silly addNameRange     '2.2.17',
+83 silly addNameRange     '2.2.18',
+83 silly addNameRange     '2.2.19',
+83 silly addNameRange     '2.2.20',
+83 silly addNameRange     '3.0.0',
+83 silly addNameRange     '3.0.1' ] ]
+84 verbose addNamed [ 'gulp-util', '3.0.1' ]
+85 verbose addNamed [ '3.0.1', '3.0.1' ]
+86 silly lockFile ea8d3cdd-gulp-util-3-0-1 gulp-util@3.0.1
+87 verbose lock gulp-util@3.0.1 /Users/danielhusar/.npm/ea8d3cdd-gulp-util-3-0-1.lock
+88 silly lockFile ea8d3cdd-gulp-util-3-0-1 gulp-util@3.0.1
+89 silly lockFile ea8d3cdd-gulp-util-3-0-1 gulp-util@3.0.1
+90 silly lockFile dfa9a863-gulp-util-3-0-0 gulp-util@^3.0.0
+91 silly lockFile dfa9a863-gulp-util-3-0-0 gulp-util@^3.0.0
+92 http 200 https://registry.npmjs.org/mocha
+93 silly registry.get cb [ 200,
+93 silly registry.get   { date: 'Sun, 30 Nov 2014 19:21:07 GMT',
+93 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+93 silly registry.get     etag: '"5MIXD068JCPTGAZU26SKLA8EP"',
+93 silly registry.get     'content-type': 'application/json',
+93 silly registry.get     'cache-control': 'max-age=60',
+93 silly registry.get     'content-length': '107911',
+93 silly registry.get     'accept-ranges': 'bytes',
+93 silly registry.get     via: '1.1 varnish',
+93 silly registry.get     age: '53',
+93 silly registry.get     'x-served-by': 'cache-ams4128-AMS',
+93 silly registry.get     'x-cache': 'HIT',
+93 silly registry.get     'x-cache-hits': '4',
+93 silly registry.get     'x-timer': 'S1417375267.879187,VS0,VE0',
+93 silly registry.get     vary: 'Accept',
+93 silly registry.get     'keep-alive': 'timeout=10, max=50',
+93 silly registry.get     connection: 'Keep-Alive' } ]
+94 silly addNameRange number 2 { name: 'mocha', range: '*', hasData: true }
+95 silly addNameRange versions [ 'mocha',
+95 silly addNameRange   [ '0.0.1-alpha1',
+95 silly addNameRange     '0.0.1-alpha2',
+95 silly addNameRange     '0.0.1-alpha3',
+95 silly addNameRange     '0.0.1-alpha4',
+95 silly addNameRange     '0.0.1-alpha5',
+95 silly addNameRange     '0.0.1-alpha6',
+95 silly addNameRange     '0.0.1',
+95 silly addNameRange     '0.0.2',
+95 silly addNameRange     '0.0.3',
+95 silly addNameRange     '0.0.4',
+95 silly addNameRange     '0.0.5',
+95 silly addNameRange     '0.0.6',
+95 silly addNameRange     '0.0.7',
+95 silly addNameRange     '0.0.8',
+95 silly addNameRange     '0.1.0',
+95 silly addNameRange     '0.2.0',
+95 silly addNameRange     '0.3.0',
+95 silly addNameRange     '0.3.1',
+95 silly addNameRange     '0.3.2',
+95 silly addNameRange     '0.3.3',
+95 silly addNameRange     '0.3.4',
+95 silly addNameRange     '0.3.6',
+95 silly addNameRange     '0.4.0',
+95 silly addNameRange     '0.5.0',
+95 silly addNameRange     '0.6.0',
+95 silly addNameRange     '0.7.0',
+95 silly addNameRange     '0.7.1',
+95 silly addNameRange     '0.8.0',
+95 silly addNameRange     '0.8.1',
+95 silly addNameRange     '0.9.0',
+95 silly addNameRange     '0.10.0',
+95 silly addNameRange     '0.10.1',
+95 silly addNameRange     '0.10.2',
+95 silly addNameRange     '0.11.0',
+95 silly addNameRange     '0.12.0',
+95 silly addNameRange     '0.12.1',
+95 silly addNameRange     '0.13.0',
+95 silly addNameRange     '0.14.0',
+95 silly addNameRange     '0.14.1',
+95 silly addNameRange     '1.0.0',
+95 silly addNameRange     '1.0.1',
+95 silly addNameRange     '1.0.2',
+95 silly addNameRange     '1.0.3',
+95 silly addNameRange     '1.1.0',
+95 silly addNameRange     '1.2.0',
+95 silly addNameRange     '1.2.1',
+95 silly addNameRange     '1.2.2',
+95 silly addNameRange     '1.3.0',
+95 silly addNameRange     '1.3.1',
+95 silly addNameRange     '1.3.2',
+95 silly addNameRange     '1.4.0',
+95 silly addNameRange     '1.4.1',
+95 silly addNameRange     '1.4.2',
+95 silly addNameRange     '1.4.3',
+95 silly addNameRange     '1.5.0',
+95 silly addNameRange     '1.6.0',
+95 silly addNameRange     '1.7.0',
+95 silly addNameRange     '1.7.1',
+95 silly addNameRange     '1.7.2',
+95 silly addNameRange     '1.7.3',
+95 silly addNameRange     '1.7.4',
+95 silly addNameRange     '1.8.0',
+95 silly addNameRange     '1.8.1',
+95 silly addNameRange     '1.8.2',
+95 silly addNameRange     '1.9.0',
+95 silly addNameRange     '1.10.0',
+95 silly addNameRange     '1.11.0',
+95 silly addNameRange     '1.12.0',
+95 silly addNameRange     '1.12.1',
+95 silly addNameRange     '1.13.0',
+95 silly addNameRange     '1.14.0',
+95 silly addNameRange     '1.15.0',
+95 silly addNameRange     '1.15.1',
+95 silly addNameRange     '1.16.0',
+95 silly addNameRange     '1.16.1',
+95 silly addNameRange     '1.16.2',
+95 silly addNameRange     '1.17.0',
+95 silly addNameRange     '1.17.1',
+95 silly addNameRange     '1.18.0',
+95 silly addNameRange     '1.18.1',
+95 silly addNameRange     '1.18.2',
+95 silly addNameRange     '1.19.0',
+95 silly addNameRange     '1.20.0',
+95 silly addNameRange     '1.20.1',
+95 silly addNameRange     '1.21.0',
+95 silly addNameRange     '1.21.1',
+95 silly addNameRange     '1.21.2',
+95 silly addNameRange     '1.21.3',
+95 silly addNameRange     '1.21.4',
+95 silly addNameRange     '1.21.5',
+95 silly addNameRange     '2.0.0',
+95 silly addNameRange     '2.0.1' ] ]
+96 verbose addNamed [ 'mocha', '2.0.1' ]
+97 verbose addNamed [ '2.0.1', '2.0.1' ]
+98 silly lockFile 5f39746a-mocha-2-0-1 mocha@2.0.1
+99 verbose lock mocha@2.0.1 /Users/danielhusar/.npm/5f39746a-mocha-2-0-1.lock
+100 silly lockFile dc84c91a--npmjs-org-mocha-mocha-2-0-1-tgz https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz
+101 verbose lock https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz /Users/danielhusar/.npm/dc84c91a--npmjs-org-mocha-mocha-2-0-1-tgz.lock
+102 verbose addRemoteTarball [ 'https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz',
+102 verbose addRemoteTarball   '5a16e88b856d0c4145d8c6888c27ebd4fab13e90' ]
+103 info retry fetch attempt 1 at 19:21:07
+104 verbose fetch to= /var/folders/27/06lc7__10613vl3nmjk7hp9r0000gn/T/npm-21004-dRol_irF/registry.npmjs.org/mocha/-/mocha-2.0.1.tgz
+105 http GET https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz
+106 http 200 https://registry.npmjs.org/through2/-/through2-0.6.3.tgz
+107 silly lockFile 443e9f42--org-through2-through2-0-6-3-tgz https://registry.npmjs.org/through2/-/through2-0.6.3.tgz
+108 silly lockFile 443e9f42--org-through2-through2-0-6-3-tgz https://registry.npmjs.org/through2/-/through2-0.6.3.tgz
+109 silly lockFile 2a56946f-through2-0-6-3 through2@0.6.3
+110 silly lockFile 2a56946f-through2-0-6-3 through2@0.6.3
+111 silly lockFile ef970176-through2-0-6-1 through2@^0.6.1
+112 silly lockFile ef970176-through2-0-6-1 through2@^0.6.1
+113 http 200 https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz
+114 silly lockFile dc84c91a--npmjs-org-mocha-mocha-2-0-1-tgz https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz
+115 silly lockFile dc84c91a--npmjs-org-mocha-mocha-2-0-1-tgz https://registry.npmjs.org/mocha/-/mocha-2.0.1.tgz
+116 silly lockFile 5f39746a-mocha-2-0-1 mocha@2.0.1
+117 silly lockFile 5f39746a-mocha-2-0-1 mocha@2.0.1
+118 silly lockFile 4d0fa87f-mocha mocha@*
+119 silly lockFile 4d0fa87f-mocha mocha@*
+120 error Error: EACCES, mkdir '/Users/danielhusar/.npm/through2/0.6.3'
+120 error  { [Error: EACCES, mkdir '/Users/danielhusar/.npm/through2/0.6.3']
+120 error   errno: 3,
+120 error   code: 'EACCES',
+120 error   path: '/Users/danielhusar/.npm/through2/0.6.3',
+120 error   parent: 'gulp-save' }
+121 error Please try running this command again as root/Administrator.
+122 error System Darwin 14.0.0
+123 error command "node" "/usr/local/bin/npm" "install"
+124 error cwd /Users/danielhusar/Dev/nodejs/gulp-save
+125 error node -v v0.10.32
+126 error npm -v 1.4.28
+127 error path /Users/danielhusar/.npm/through2/0.6.3
+128 error code EACCES
+129 error errno 3
+130 error stack Error: EACCES, mkdir '/Users/danielhusar/.npm/through2/0.6.3'
+131 verbose exit [ 3, true ]
