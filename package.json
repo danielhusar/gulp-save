@@ -1,6 +1,6 @@
 {
   "name": "gulp-save",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Store and restore stream",
   "license": "MIT",
   "repository": "danielhusar/gulp-save",
