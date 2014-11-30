@@ -33,7 +33,6 @@ module.exports = function (store) {
 		delete tempFile._contents;
 		tempFile.contents = file.contents;
 		cache[store].push(new gutil.File(tempFile));
-
 		this.push(file);
 		cb();
 	});
