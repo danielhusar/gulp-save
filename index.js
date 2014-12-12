@@ -1,7 +1,6 @@
 'use strict';
 var gutil = require('gulp-util');
 var through = require('through2');
-var _ = require('lodash');
 var cache = {};
 
 module.exports = function (store) {
@@ -29,10 +28,7 @@ module.exports = function (store) {
 			firstFile = true;
 		}
 
-		var tempFile = _.clone(file);
-		delete tempFile._contents;
-		tempFile.contents = file.contents;
-		cache[store].push(new gutil.File(tempFile));
+		cache[store].push(new gutil.File(file));
 		this.push(file);
 		cb();
 	});
