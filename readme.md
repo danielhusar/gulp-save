@@ -19,7 +19,7 @@ var uglify = require('gulp-uglify');
 
 gulp.task('default', function () {
 	return gulp.src('src/*.js')
-		.pipe(save('before-uglify')) //cache all files here
+		.pipe(save('before-uglify', opts)) //cache all files here
 		.pipe(uglify())
 		.pipe(gulp.dest('dist'))
 		.pipe(save.restore('before-uglify')) //restore all files to the state when we cached them
@@ -31,7 +31,7 @@ gulp.task('default', function () {
 
 ## API
 
-### save(cache)
+### save(cache, opts)
 
 ####cache
 
@@ -39,6 +39,9 @@ Type: `string`
 Default: ``
 
 Key where the stream will be cached.
+
+####opts
+Same as [vinyl clone options](https://github.com/wearefractal/vinyl#cloneopt)
 
 ### save.restore(cache)
 
