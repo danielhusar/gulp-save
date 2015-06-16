@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 var through = require('through2');
 var cache = {};
 
-module.exports = function (store) {
+module.exports = function (store, opts) {
 	if (!store || typeof store !== 'string') {
 		throw new gutil.PluginError('gulp-save', '`store` parameter must be string');
 	}
@@ -28,7 +28,7 @@ module.exports = function (store) {
 			firstFile = true;
 		}
 
-		cache[store].push(new gutil.File(file));
+		cache[store].push(file.clone(opts));
 		this.push(file);
 		cb();
 	});
