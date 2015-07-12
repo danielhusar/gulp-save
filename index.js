@@ -44,7 +44,9 @@ module.exports.restore = function (store) {
 	}, function (cb) {
 
 		if (!cache[store]) {
-			gutil.log('gulp-save', gutil.colors.red('cache for `'+ store +'` not found'));
+			this.emit('error', new gutil.PluginError('gulp-save', 'Cache for `'+ store +'` not found'));
+			cb();
+			return;
 		}
 
 		cache[store].forEach(function (file) {
