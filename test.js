@@ -100,3 +100,31 @@ it('should cache stream and restore it with custom options', function (cb) {
 
 	startStream.end();
 });
+
+it('should emit error when store is not found', function (cb) {
+	var startStream = start();
+	var startCache = save('foo');
+	var transformStream = transform();
+	var endStream = end();
+	var restoreCache = save.restore('bar');
+
+	startStream.pipe(startCache)
+			 .pipe(transformStream)
+			 .pipe(restoreCache)
+			 .on('error', function (err) {
+				cb();
+			 })
+			 .pipe(endStream);
+
+	endStream.on('end', function () {
+		throw new Error('Should have thrown');
+	});
+
+	startStream.write(new gutil.File({
+		base: __dirname,
+		path: __dirname + '/file.js',
+		contents: new Buffer('unicorns')
+	}));
+
+	startStream.end();
+});
