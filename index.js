@@ -70,6 +70,7 @@ module.exports.clear = function () {
 	}
 
 	return through.obj(function (file, enc, cb) {
+		this.push(file);
 		cb();
 	}, function (cb) {
 		(stores || Object.keys(cache)).forEach(function(store) {
