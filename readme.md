@@ -52,6 +52,16 @@ Default: ``
 
 Key from where stream should be restored.
 
+### save.clear(cache, cache, ...)
+
+####cache
+
+Type: `string`  
+Default: ``
+
+Cache item to clear.
+If `save.clear` is called with no parameters, it will clear the whole cache. 
+
 
 ## License
 

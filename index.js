@@ -59,7 +59,7 @@ module.exports.restore = function (store) {
 
 module.exports.clear = function () {
 	if (arguments.length) {
-		var stores = Array.prototype.slice.call(arguments).filter(function(store) {
+		var stores = Array.prototype.slice.call(arguments).filter(function (store) {
 			if (typeof store !== 'string') {
 				gutil.log('gulp-save', gutil.colors.red('Store names must be strings'));
 				return false;
@@ -73,7 +73,7 @@ module.exports.clear = function () {
 		this.push(file);
 		cb();
 	}, function (cb) {
-		(stores || Object.keys(cache)).forEach(function(store) {
+		(stores || Object.keys(cache)).forEach(function (store) {
 			delete cache[store];
 		});
 
