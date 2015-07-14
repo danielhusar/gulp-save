@@ -128,3 +128,69 @@ it('should emit error when store is not found', function (cb) {
 
 	startStream.end();
 });
+
+it('should delete named cache stores', function (cb) {
+	var startStream = start();
+	var fooCache = save('foo');
+	var barCache = save('bar');
+	var transformStream = transform();
+	var endStream = end();
+	var clearCache = save.clear('bar');
+	var restoreFooCache = save.restore('foo');
+	var restoreBarCache = save.restore('bar');
+
+	startStream.pipe(fooCache)
+			 .pipe(barCache)
+			 .pipe(transformStream)
+			 .pipe(clearCache)
+			 .pipe(restoreFooCache)
+			 .pipe(restoreBarCache)
+			 .pipe(endStream);
+
+	restoreBarCache.on('error', function (err) {
+		cb();
+	});
+
+	endStream.on('end', function () {
+		throw new Error('Should have thrown');
+	});
+
+	startStream.write(new gutil.File({
+		base: __dirname,
+		path: __dirname + '/file.js',
+		contents: new Buffer('unicorns')
+	}));
+
+	startStream.end();
+});
+
+it('should clear the whole cache', function (cb) {
+	var startStream = start();
+	var startCache = save('test');
+	var transformStream = transform();
+	var endStream = end();
+	var clearCache = save.clear();
+	var restoreCache = save.restore('test');
+
+	startStream.pipe(startCache)
+			 .pipe(transformStream)
+			 .pipe(clearCache)
+			 .pipe(restoreCache)
+			 .pipe(endStream);
+
+	restoreCache.on('error', function (err) {
+		cb();
+	});
+
+	endStream.on('end', function () {
+		throw new Error('Should have thrown');
+	});
+
+	startStream.write(new gutil.File({
+		base: __dirname,
+		path: __dirname + '/file.js',
+		contents: new Buffer('unicorns')
+	}));
+
+	startStream.end();
+});

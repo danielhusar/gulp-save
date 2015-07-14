@@ -56,3 +56,27 @@ module.exports.restore = function (store) {
 		cb();
 	});
 };
+
+module.exports.clear = function () {
+	if (arguments.length) {
+		var stores = Array.prototype.slice.call(arguments).filter(function(store) {
+			if (typeof store !== 'string') {
+				gutil.log('gulp-save', gutil.colors.red('Store names must be strings'));
+				return false;
+			}
+
+			return true;
+		});
+	}
+
+	return through.obj(function (file, enc, cb) {
+		this.push(file);
+		cb();
+	}, function (cb) {
+		(stores || Object.keys(cache)).forEach(function(store) {
+			delete cache[store];
+		});
+
+		cb();
+	});
+};
