@@ -129,6 +129,25 @@ it('should emit error when store is not found', function (cb) {
 	startStream.end();
 });
 
+it('should restore from empty streams', function (cb) {
+	var startStream = start();
+	var startCache = save('test');
+	var transformStream = transform();
+	var endStream = end();
+	var restoreCache = save.restore('test');
+
+	startStream.pipe(startCache)
+			 .pipe(transformStream)
+			 .pipe(restoreCache)
+			 .pipe(endStream);
+
+	endStream.on('data', function (file) {
+		throw new Error('Should have no file');
+	}).on('end', cb);
+
+	startStream.end();
+});
+
 it('should delete named cache stores', function (cb) {
 	var startStream = start();
 	var fooCache = save('foo');

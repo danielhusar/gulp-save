@@ -8,7 +8,7 @@ module.exports = function (store, opts) {
 		throw new gutil.PluginError('gulp-save', '`store` parameter must be string');
 	}
 
-	var firstFile = false;
+	cache[store] = [];
 
 	return through.obj(function (file, enc, cb) {
 		if (file.isNull()) {
@@ -21,11 +21,6 @@ module.exports = function (store, opts) {
 			this.emit('error', new gutil.PluginError('gulp-save', 'Streaming not supported'));
 			cb();
 			return;
-		}
-
-		if (!firstFile) {
-			cache[store] = [];
-			firstFile = true;
 		}
 
 		cache[store].push(file.clone(opts));
