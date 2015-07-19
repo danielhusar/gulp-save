@@ -1,14 +1,22 @@
 {
   "name": "gulp-save",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Store and restore streams",
   "license": "MIT",
-  "repository": "danielhusar/gulp-save",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielhusar/gulp-save"
+  },
   "author": {
     "name": "Daniel Husar",
     "email": "dano.husar@gmail.com",
     "url": "https://github.com/danielhusar"
   },
+  "contributors": [{
+    "name": "Massimo Artizzu",
+    "email": "maxart.x@gmail.com",
+    "url": "https://github.com/maxart2501"
+  }],
   "engines": {
     "node": ">=0.10.0"
   },
