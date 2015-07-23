@@ -35,7 +35,7 @@ module.exports.restore = function (store) {
 	}
 
 	return through.obj(function (file, enc, cb) {
-		cb();
+		cb(null, file);
 	}, function (cb) {
 
 		if (!cache[store]) {
