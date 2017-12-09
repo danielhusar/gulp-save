@@ -29,7 +29,7 @@ module.exports = function (store, opts) {
 	});
 };
 
-module.exports.restore = function (store) {
+module.exports.restore = function (store, opts) {
 	if (!store || typeof store !== 'string') {
 		throw new gutil.PluginError('gulp-save', '`store` parameter must be string');
 	}
@@ -45,7 +45,7 @@ module.exports.restore = function (store) {
 		}
 
 		cache[store].forEach(function (file) {
-			this.push(file);
+			this.push(file.clone(opts));
 		}.bind(this));
 
 		cb();
