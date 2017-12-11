@@ -26,6 +26,14 @@ function transform () {
 	});
 }
 
+function otherTransform () {
+	return through.obj(function (file, enc, cb) {
+		file.contents = new Buffer('three unicorns');
+		this.push(file);
+		cb();
+	});
+}
+
 function end () {
 	return through.obj(function (file, enc, cb) {
 		this.push(file);
@@ -72,7 +80,7 @@ it('should cache stream and restore it with custom options', function (cb) {
 	var startCache = save('test', {deep: true});
 	var transformStream = transform();
 	var endStream = end();
-	var restoreCache = save.restore('test');
+	var restoreCache = save.restore('test', {deep: true});
 
 	startStream.pipe(startCache)
 			 .pipe(transformStream)
@@ -81,6 +89,48 @@ it('should cache stream and restore it with custom options', function (cb) {
 
 	transformStream.on('data', function (file) {
 		assert.equal(file.contents.toString(), 'two unicorns');
+		assert.equal(file.custom.bar.baz, true);
+	});
+
+	endStream.on('data', function (file) {
+		assert.equal(file.contents.toString(), 'unicorns');
+		foo.bar.baz = false;
+		assert.equal(file.custom.bar.baz, true);
+	});
+
+	endStream.on('end', cb);
+
+	startStream.write(new gutil.File({
+		base: __dirname,
+		path: __dirname + '/file.js',
+		contents: new Buffer('unicorns')
+	}));
+
+	startStream.end();
+});
+
+it('should cache stream and restore it with custom options multiple times', function (cb) {
+	var startStream = start();
+	var startCache = save('test', {deep: true});
+	var transformStream = transform();
+	var otherTransformStream = otherTransform();
+	var endStream = end();
+	var restoreCache = save.restore('test', {deep: true});
+
+	startStream.pipe(startCache)
+			 .pipe(transformStream)
+			 .pipe(restoreCache)
+	                 .pipe(otherTransformStream)
+			 .pipe(restoreCache)
+			 .pipe(endStream);
+
+	transformStream.on('data', function (file) {
+		assert.equal(file.contents.toString(), 'two unicorns');
+		assert.equal(file.custom.bar.baz, true);
+	});
+
+	otherTransformStream.on('data', function (file) {
+		assert.equal(file.contents.toString(), 'three unicorns');
 		assert.equal(file.custom.bar.baz, true);
 	});
 
