@@ -12,11 +12,13 @@
     "email": "dano.husar@gmail.com",
     "url": "https://github.com/danielhusar"
   },
-  "contributors": [{
-    "name": "Massimo Artizzu",
-    "email": "maxart.x@gmail.com",
-    "url": "https://github.com/maxart2501"
-  }],
+  "contributors": [
+    {
+      "name": "Massimo Artizzu",
+      "email": "maxart.x@gmail.com",
+      "url": "https://github.com/maxart2501"
+    }
+  ],
   "engines": {
     "node": ">=0.10.0"
   },

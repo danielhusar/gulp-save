@@ -41,6 +41,10 @@ function end () {
 	});
 }
 
+beforeEach(() => {
+	foo.bar.baz = true;
+});
+
 it('should cache stream and restore it', function (cb) {
 	var startStream = start();
 	var startCache = save('test');
@@ -80,7 +84,7 @@ it('should cache stream and restore it with custom options', function (cb) {
 	var startCache = save('test', {deep: true});
 	var transformStream = transform();
 	var endStream = end();
-	var restoreCache = save.restore('test', {deep: true});
+	var restoreCache = save.restore('test');
 
 	startStream.pipe(startCache)
 			 .pipe(transformStream)
@@ -115,13 +119,14 @@ it('should cache stream and restore it with custom options multiple times', func
 	var transformStream = transform();
 	var otherTransformStream = otherTransform();
 	var endStream = end();
-	var restoreCache = save.restore('test', {deep: true});
+	var restoreCacheFirstTime = save.restore('test', {deep: true});
+	var restoreCacheSecondTime = save.restore('test', {deep: true});
 
 	startStream.pipe(startCache)
 			 .pipe(transformStream)
-			 .pipe(restoreCache)
-	                 .pipe(otherTransformStream)
-			 .pipe(restoreCache)
+			 .pipe(restoreCacheFirstTime)
+			 .pipe(otherTransformStream)
+			 .pipe(restoreCacheSecondTime)
 			 .pipe(endStream);
 
 	transformStream.on('data', function (file) {
